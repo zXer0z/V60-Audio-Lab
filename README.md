@@ -109,7 +109,7 @@ Ver [evidencia y límites](docs/EVIDENCE.md). Una frecuencia aceptada por AudioT
 - [Problemas conocidos y recuperación](docs/TROUBLESHOOTING.md)
 - [Procedencia y licencias](docs/LICENSING.md)
 
-Las pruebas funcionales las realiza el usuario. Esta publicación no instala ni ejecuta pruebas automáticamente y no incluye flujos de GitHub Actions.
+La validación funcional se realiza manualmente en el equipo de referencia. Esta publicación no instala ni ejecuta pruebas automáticamente y no incluye flujos de GitHub Actions.
 
 ## Créditos y licencia
 

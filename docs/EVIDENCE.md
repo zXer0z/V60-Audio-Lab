@@ -2,7 +2,7 @@
 
 ## Resultado audible
 
-El 2026-10-29, el usuario confirmó música limpia y continua al reproducir DSF DSD128 por la ruta adaptada hacia su amplificador. Después se integró en el reproductor. La confirmación de escucha no mide por sí sola qué transformaciones se producen en cada etapa.
+El 2026-10-29 comprobamos una reproducción limpia y continua de DSF DSD128 por la ruta adaptada, con un amplificador conectado a la salida analógica. Después integramos esta ruta en el reproductor. La comprobación por escucha no mide por sí sola qué transformaciones se producen en cada etapa.
 
 ## Comprobación digital
 
