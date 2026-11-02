@@ -21,7 +21,7 @@ Código, recetas y resultados. Sin confundir una frecuencia solicitada con una s
 
 Este repositorio documenta el trabajo que permitió reproducir **DSD128 por DoP mediante el Quad DAC interno y el jack del LG V60**. Reúne las piezas del laboratorio que no pertenecen al kernel ni a las aplicaciones: transformaciones del HAL y las políticas de audio, configuración de referencia, inspección del ramdisk y una guía de integración.
 
-El usuario confirmó música **limpia y continua** en la ruta adaptada. También comprobamos un fragmento real de DoP con datos DSD intactos antes de la entrega al HAL. No se presenta como una certificación eléctrica bit-perfect del DAC ni como un instalador para cualquier ROM.
+También comprobamos un fragmento real de DoP con datos DSD intactos antes de la entrega al HAL. No se presenta como una certificación eléctrica bit-perfect del DAC ni como un instalador para cualquier ROM.
 
 ## El mapa
 
