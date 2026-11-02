@@ -1,0 +1,23 @@
+# Temporary 24-bit DoP lab: guarded HAL plus explicit DSP profile; no partition writes.
+on early-init
+    exec u:r:magisk:s0 root root -- ${MAGISKTMP}/zero_dop_busybox chcon u:object_r:vendor_configs_file:s0 ${MAGISKTMP}/zero_dop_platform.xml ${MAGISKTMP}/zero_dop_intcodec.xml ${MAGISKTMP}/zero_dop_mixer.xml ${MAGISKTMP}/zero_dop_io_policy.conf ${MAGISKTMP}/zero_dop_policy.xml
+    exec u:r:magisk:s0 root root -- ${MAGISKTMP}/zero_dop_busybox chcon u:object_r:vendor_file:s0 ${MAGISKTMP}/zero_dop_hal.so
+    chmod 0644 ${MAGISKTMP}/zero_dop_platform.xml
+    chmod 0644 ${MAGISKTMP}/zero_dop_intcodec.xml
+    chmod 0644 ${MAGISKTMP}/zero_dop_mixer.xml
+    chmod 0644 ${MAGISKTMP}/zero_dop_io_policy.conf
+    chmod 0644 ${MAGISKTMP}/zero_dop_hal.so
+    mount none ${MAGISKTMP}/zero_dop_platform.xml /vendor/etc/audio_platform_info.xml bind
+    mount none ${MAGISKTMP}/zero_dop_intcodec.xml /vendor/etc/audio_platform_info_intcodec.xml bind
+    mount none ${MAGISKTMP}/zero_dop_mixer.xml /vendor/etc/mixer_paths.xml bind
+    mount none ${MAGISKTMP}/zero_dop_io_policy.conf /vendor/etc/audio_io_policy.conf bind
+    mount none ${MAGISKTMP}/zero_dop_hal.so /vendor/lib/hw/audio.primary.kona.so bind
+    chmod 0644 ${MAGISKTMP}/zero_dop_policy.xml
+    write /dev/kmsg "ZERO_DOP_LAB_DSP_EARLY_INIT_ACTION_FINISHED"
+
+# Magisk finishes its module policy overlay during post-fs-data. Apply the
+# private policy after persistent props load, before class hal/core/main start.
+on load_persist_props_action
+    exec u:r:magisk:s0 root root -- ${MAGISKTMP}/zero_dop_busybox chcon u:object_r:vendor_configs_file:s0 ${MAGISKTMP}/zero_dop_policy.xml
+    mount none ${MAGISKTMP}/zero_dop_policy.xml /vendor/etc/audio/audio_policy_configuration.xml bind
+    write /dev/kmsg "ZERO_DOP24_POLICY_AFTER_MAGISK"

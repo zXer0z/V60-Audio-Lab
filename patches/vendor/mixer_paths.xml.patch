@@ -1,0 +1,36 @@
+--- a/mixer_paths.xml
++++ b/mixer_paths.xml
+@@ -4859,4 +4859,33 @@
+         <path name="headset-mic" />
+     </path>
+ 
++
++    <!-- LAB CANDIDATE: DoP uses the ESS MI2S link, not the TDM stub.
++         Rate/clock/bitstream integrity must be verified before deployment.
++         Es9018 Dop remains owned by the HAL; no forced default mode. -->
++    <path name="headphones-hifi-dacdop">
++        <ctl name="Es9018 AVC Volume" value="10" />
++        <ctl name="Es9018 Master Volume" value="5" />
++        <ctl name="Es9018 HEADSET TYPE" value="1" />
++    </path>
++
++    <path name="headphones-hifi-dacdop-advanced">
++        <ctl name="Es9018 AVC Volume" value="0" />
++        <ctl name="Es9018 Master Volume" value="0" />
++        <ctl name="Es9018 HEADSET TYPE" value="2" />
++    </path>
++
++    <path name="headphones-hifi-dacdop-aux">
++        <ctl name="Es9018 AVC Volume" value="0" />
++        <ctl name="Es9018 Master Volume" value="0" />
++        <ctl name="Es9018 HEADSET TYPE" value="3" />
++    </path>
++
++    <path name="dop-playback TERT_MI2S_RX">
++        <!-- Private DoP128 laboratory only; not valid for DoP64. -->
++        <ctl name="TERT_MI2S_RX SampleRate" value="KHZ_352P8" />
++        <ctl name="TERT_MI2S_RX Format" value="S24_LE" />
++        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia2" value="1" />
++    </path>
++
+ </mixer>

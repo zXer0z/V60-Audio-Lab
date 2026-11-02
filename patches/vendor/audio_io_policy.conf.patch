@@ -1,0 +1,19 @@
+--- a/audio_io_policy.conf
++++ b/audio_io_policy.conf
+@@ -11,6 +11,16 @@
+ # the flags and formats should match the ones in "audio_policy.conf"
+ 
+ outputs {
++  # Temporary DoP lab: stock generic parser names LG DoP bit0x800000 PHONE.
++  # The alias applies only here; runtime flags remain DIRECT|LG_DOP(0x800001).
++  zero_dop_24 {
++    flags AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_PHONE
++    formats AUDIO_FORMAT_PCM_24_BIT_PACKED
++    sampling_rates 176400|352800
++    bit_width 24
++    app_type 69940
++  }
++
+   default {
+     flags AUDIO_OUTPUT_FLAG_PRIMARY
+     formats AUDIO_FORMAT_PCM_16_BIT

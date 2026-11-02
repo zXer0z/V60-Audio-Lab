@@ -1,0 +1,27 @@
+# Local inputs, generated vendor files, captures and device-specific artifacts
+/inputs/
+/output/
+/outputs/
+/captures/
+/diagnostics/
+/build/
+/private/
+__pycache__/
+*.pyc
+*.so
+*.img
+*.cpio
+*.apk
+*.aab
+*.wav
+*.flac
+*.dsf
+*.dff
+*.alac
+*.mp3
+*.jks
+*.keystore
+*.p12
+*.pem
+.env
+.env.*

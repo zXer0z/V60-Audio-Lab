@@ -1,0 +1,12 @@
+V60-Audio-Lab
+Project integration: zXer0z.
+
+Kernel patches derive from Linux, Qualcomm, LG, ESS and QCloud sources.
+Original source and authorship: https://github.com/aqbaloch6205/LGV60_Timelm_Qcloud_Kernel
+Base: 78253129915f211b0f4e8c86bea09c50111f3b4d
+Recovered ESS driver: 4e55e8eca6beb81f2eab88617d6e496c0f2be4c1
+Full source and original license notices: https://github.com/zXer0z/Kernel-DOP
+
+Vendor XML patch excerpts preserve their upstream context. Original files retain
+their own notices and license terms. No license is granted to proprietary HALs
+or other vendor binaries by this repository. Inputs must be supplied locally.

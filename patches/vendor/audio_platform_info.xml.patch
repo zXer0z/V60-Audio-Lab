@@ -1,0 +1,15 @@
+--- a/audio_platform_info.xml
++++ b/audio_platform_info.xml
+@@ -328,9 +328,9 @@
+         <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DAC_44_1" backend="SEN_MI2S_RX" interface="SEN_MI2S_RX"/>
+         <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DAC_44_1_ADVANCED" backend="SEN_MI2S_RX" interface="SEN_MI2S_RX"/>
+         <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DAC_44_1_AUX" backend="SEN_MI2S_RX" interface="SEN_MI2S_RX"/>
+-        <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DACDOP" backend="TERT_TDM_RX_0" interface="TERT_TDM_RX_0"/>
+-        <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DACDOP_ADVANCED" backend="TERT_TDM_RX_0" interface="TERT_TDM_RX_0"/>
+-        <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DACDOP_AUX" backend="TERT_TDM_RX_0" interface="TERT_TDM_RX_0"/>
++        <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DACDOP" backend="TERT_MI2S_RX" interface="TERT_MI2S_RX"/>
++        <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DACDOP_ADVANCED" backend="TERT_MI2S_RX" interface="TERT_MI2S_RX"/>
++        <device name="SND_DEVICE_LGE_OUT_HEADPHONES_HIFI_DACDOP_AUX" backend="TERT_MI2S_RX" interface="TERT_MI2S_RX"/>
+         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_AND_VOICE_HEADPHONES" backend="voice-speaker-and-voice-headphones" interface="SEC_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
+         <device name="SND_DEVICE_LGE_OUT_AAT_HEADSET" interface="WSA_CDC_DMA_RX_0"/>
+         <device name="SND_DEVICE_LGE_OUT_AAT_SPEAKER" interface="WSA_CDC_DMA_RX_0"/>
